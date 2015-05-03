@@ -1,0 +1,13 @@
+ext_inc=opencv/include vascript
+ext_lib=cxcore highgui 
+ext_libpath=opencv/lib
+EXECUTABLE=vacg.default.exe
+SOURCEFILE=dmvideo.cpp filterKernel.cpp transColor.cpp transforKernel.cpp vascript/vacg.cpp detect.cpp global.cpp vascript/vaslexer.cpp vascript/vasparser.cpp vascript/parserdriver.cpp 
+clean_obj=vaslexer.cpp vasparser.cpp vasparser.h
+-include makefile.inc
+mouse.exe:mouse.cpp transforKernel.cpp
+	${LINK++}
+bmptest.exe:bmptest.cpp	 bmp.cpp transforKernel.cpp
+	${LINK++}
+%.cv.avi:%.avi
+	mencoder $<  -ovc raw -vf format=i420 -o $@ 

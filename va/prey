@@ -1,0 +1,4 @@
+#!/bin/bash
+tok=`gcc -E token.ly.h | tail -n 1`
+mv vascript.y vascript.old
+sed -e "s/^%token.*$/$tok/"  vascript.old > vascript.y

@@ -1,0 +1,31 @@
+/** example 1
+ */
+oFrame = frame; //! 
+
+/** example 2
+ */
+oFrame = frame - frame[-1]; 
+
+/** example 4
+ */
+oFrame = frame *sobel; 
+
+/** example 5
+ */
+oFrame = frame *filter[3][3]{1,2,1,1,2,1,1,2,1}; 
+
+/** example 6
+ */
+oFrame = fft(frame); 
+
+/** example 7
+ */
+var tframe= fft(frame); 
+oFrame = tframe + 2; 
+
+/** example 8
+ */
+if(frame.index < 100) 
+    svm.train(frame); 
+else
+    oFrame = svm(frame); 

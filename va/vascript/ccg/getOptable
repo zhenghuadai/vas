@@ -1,0 +1,40 @@
+#!/bin/bash 
+make parseCoderHtml
+
+target=32
+./parseCoderHtml coder${target}-abc.htm tmpcode.h
+dstfile=op_x86_${target}.h
+echo "#ifndef __OP_x86_${target}__header__" > $dstfile
+echo "#define __OP_x86_${target}__header__" >> $dstfile
+echo "#define  decOPinfoList${target} \\">> $dstfile
+cat tmpcode.h >> $dstfile
+echo "#define opNameList${target}_(opName) \\" > opname_x86_${target}.h
+awk '/decOP\(/{print "opName( "$2" ) \\"}' tmpcode.h | sort | uniq |sed "s/,//; s/\./o/" >> opname_x86_${target}.h 
+echo "" >> opname_x86_${target}.h
+cat opname_x86_${target}.h >> $dstfile
+echo "#endif" >> $dstfile
+#sed -e "s/  //g; s:r/m8:rm8:; s:r/m16/32/64:rmwdq:; s:imm8:i8:; s:xmm:X:g" tmpcode.h > tmp1.h
+#mv tmp1.h tmpcode.h
+
+target=64
+./parseCoderHtml coder${target}-abc.htm tmpcode.h
+dstfile=op_x86_${target}.h
+echo "#ifndef __OP_x86_${target}__header__" > $dstfile
+echo "#define __OP_x86_${target}__header__" >> $dstfile
+echo "#define  decOPinfoList${target} \\">> $dstfile
+cat tmpcode.h >> $dstfile
+echo "#define opNameList${target}_(opName) \\" > opname_x86_${target}.h
+awk '/decOP\(/{print "opName( "$2" ) \\"}' tmpcode.h | sort | uniq |sed "s/,//; s/\./o/" >> opname_x86_${target}.h 
+echo "" >> opname_x86_${target}.h
+cat opname_x86_${target}.h >> $dstfile
+echo "#endif" >> $dstfile
+
+echo "#ifndef __OP_x86_header__" > opname_x86.h
+echo "#define __OP_x86_header__" >> opname_x86.h
+echo "#define opNameList(opName) \\" >> opname_x86.h
+cat opname_x86_64.h >> opname_x86_32.h
+awk '/opName\(/{print "opName(" $2 ") \\"}' opname_x86_32.h | sort | uniq |sed "s/,//; s/\./o/" >> opname_x86.h 
+echo "" >> opname_x86.h
+echo "#endif" >> opname_x86.h
+rm -f opname_x86_32.h
+rm -f opname_x86_64.h

@@ -1,0 +1,7 @@
+#!/home/zhdai/daizhproject/trunk/software/videoanalyze/videoFilter/vascript/release/testvas.exe
+//invideo = $1;
+//invideo = "Wildlife.wmv";
+//invideo = "C:\Users\Public\Videos\Sample Videos\Wildlife.avi";
+invideo = "E:\downloads\Homeless.To.Harvard.2003.STV.DVDRip.XViD-IHQDR.avi";
+outvideo = stdout;
+oframe=(frame[1] - frame)*sobel;

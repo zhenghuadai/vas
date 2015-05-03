@@ -1,0 +1,1 @@
+oframe= frame[0] + (frame[-1] * sobel);

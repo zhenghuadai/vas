@@ -1,0 +1,87 @@
+#ifndef __TOKEN__HEADER__
+#define __TOKEN__HEADER__
+#  ifndef YY_USE_CLASS
+#define tok(x) x //vasParser::x
+#  else
+#define tok(x) vasParser::x
+#endif
+#define TOKEN(x) tok_##x
+#define DEFINE_KEYENUM(x, value, type) TOKEN(x) = tok(x),
+#define DEFINE_KEYNAME(x, value, type) (char*)#x,
+#define DEFINE_TOKEN(x, value, type ) %token type x 
+
+#define DEFINE_KEYWD(op)\
+op(TK_IDENTIFIER,       ,<name>)\
+op(TK_CONSTANT,         ,<ival>)\
+op(TK_STRING_LITERAL,   ,<name>)\
+op(TK_SIZEOF,           ,)\
+op(TK_PTR_OP,           ,)\
+op(TK_INC_OP,           ,)\
+op(TK_DEC_OP,           ,)\
+op(TK_LEFT_OP,          ,)\
+op(TK_RIGHT_OP,         ,)\
+op(TK_LE_OP,            ,)\
+op(TK_GE_OP,            ,)\
+op(TK_EQ_OP,            ,)\
+op(TK_NE_OP,            ,)\
+op(TK_AND_OP,           ,)\
+op(TK_OR_OP,            ,)\
+op(TK_MUL_ASSIGN,       ,)\
+op(TK_DIV_ASSIGN,       ,)\
+op(TK_MOD_ASSIGN,       ,)\
+op(TK_ADD_ASSIGN,       ,)\
+op(TK_SUB_ASSIGN,       ,)\
+op(TK_LEFT_ASSIGN,      ,)\
+op(TK_RIGHT_ASSIGN,     ,)\
+op(TK_AND_ASSIGN,       ,)\
+op(TK_XOR_ASSIGN,       ,)\
+op(TK_OR_ASSIGN,        ,)\
+op(TK_TYPE_NAME,        ,)\
+op(TK_TYPEDEF,          ,)\
+op(TK_EXTERN,           ,)\
+op(TK_STATIC,           ,)\
+op(TK_AUTO,             ,)\
+op(TK_REGISTER,         ,)\
+op(TK_CHAR,             ,)\
+op(TK_SHORT,            ,)\
+op(TK_INT,              ,)\
+op(TK_LONG,             ,)\
+op(TK_SIGNED,           ,)\
+op(TK_UNSIGNED,         ,)\
+op(TK_FLOAT,            ,)\
+op(TK_DOUBLE,           ,)\
+op(TK_CONST,            ,)\
+op(TK_VOLATILE,         ,)\
+op(TK_VOID,             ,)\
+op(TK_STRUCT,           ,)\
+op(TK_UNION,            ,)\
+op(TK_ENUM,             ,)\
+op(TK_ELIPSIS,          ,)\
+op(TK_RANGE,            ,)\
+op(TK_CASE,             ,)\
+op(TK_DEFAULT,          ,)\
+op(TK_IF,               ,)\
+op(TK_ELSE,             ,)\
+op(TK_SWITCH,           ,)\
+op(TK_WHILE,            ,)\
+op(TK_DO,               ,)\
+op(TK_FOR,              ,)\
+op(TK_GOTO,             ,)\
+op(TK_CONTINUE,         ,)\
+op(TK_BREAK,            ,)\
+op(TK_RETURN,           ,)\
+op(TK_ELLIPSIS,         ,)\
+op(TK_FRAME   ,         ,)\
+op(TK_OFRAME  ,         ,)\
+op(TK_SOBEL   ,         ,)\
+op(TK_ROBERT  ,         ,)\
+op(TK_PREWITT ,         ,)\
+op(TK_LAPlAS  ,         ,)\
+op(TK_FREICHEN,         ,)\
+op(TK_INFILE,           ,)\
+op(TK_OUTFILE,          ,)\
+op(TK_DOLLAR,           ,)\
+op(TK_STDOUT  ,         ,)\
+
+
+#endif

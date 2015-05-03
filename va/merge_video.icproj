@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="gb2312"?>
+<VisualStudioProject
+	ProjectType="Intel C++ Project"
+	Version="11.1"
+	Name="KeyBoard"
+	ProjectGUID="{7D7871C5-E78A-4099-9F9C-F0FBB768DADA}"
+	VCNestedProjectGUID="{EE3A64B4-22EF-424A-91AA-D9FE887F665B}"
+	VCNestedProjectFileName="merge_video.vcproj">
+	<Configurations>
+		<Configuration
+			Name="Release|Win32">
+			<Tool
+				Name="CppCmplrTool"
+				GlobalOptimizations="true"
+				OptimizeForWindowsApplication="true"
+				ImproveFloatingPointConsistency="1000"
+				UseProcExt="5"
+				RequireProcExt="5"
+				Parallelization="true"/>
+		</Configuration>
+	</Configurations>
+	<Files/>
+</VisualStudioProject>

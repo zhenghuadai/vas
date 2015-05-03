@@ -1,0 +1,15 @@
+#!/home/zhdai/daizhproject/trunk/software/videoanalyze/videoFilter/vascript/release/testvas.exe
+invideo = $1;
+//invideo = "test.avi";
+oframe=(frame+frame[-1])*sobel; oframe=frame*sobel;oframe=frame; tframe = frame - frame[-1]; oframe=tframe; 
+if(tframe) oframe=tframe;
+{oframe=(frame+frame[-1])*sobel; oframe=frame*sobel;oframe=frame; tframe = frame - frame[-1]; oframe=tframe; oframe=frame*sobel;}
+if(tframe)
+    oframe=tframe;
+else
+{oframe=(frame+frame[-1])*sobel; oframe=frame*sobel;oframe=frame; tframe = frame - frame[-1]; oframe=tframe; oframe=frame*sobel;}
+
+{oframe=(frame+frame[-1])*sobel; oframe=frame*sobel;oframe=frame; tframe = frame - frame[-1]; oframe=tframe; oframe=frame*sobel;}
+oframe=(frame+frame[-1])*sobel; oframe=frame*sobel;oframe=frame; tframe = frame - frame[-1]; oframe=tframe; 
+void abc(){oframe=tframe;}
+int iabc(){oframe=tframe;}

@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{EAF909A5-FA59-4C3D-9431-0FCC20D5BCF9}") = "KeyBoard", "merge_video.icproj", "{7D7871C5-E78A-4099-9F9C-F0FBB768DADA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bmpProcess", "bmpProcess.vcproj", "{D5BE32A9-79EA-4E48-AF4C-29DA52428125}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mouse", "mouse.vcproj", "{CD3F22B4-7E46-4653-BE7B-DE71C79F5A75}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D7871C5-E78A-4099-9F9C-F0FBB768DADA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7D7871C5-E78A-4099-9F9C-F0FBB768DADA}.Debug|Win32.Build.0 = Debug|Win32
+		{7D7871C5-E78A-4099-9F9C-F0FBB768DADA}.Release|Win32.ActiveCfg = Release|Win32
+		{7D7871C5-E78A-4099-9F9C-F0FBB768DADA}.Release|Win32.Build.0 = Release|Win32
+		{D5BE32A9-79EA-4E48-AF4C-29DA52428125}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D5BE32A9-79EA-4E48-AF4C-29DA52428125}.Debug|Win32.Build.0 = Debug|Win32
+		{D5BE32A9-79EA-4E48-AF4C-29DA52428125}.Release|Win32.ActiveCfg = Release|Win32
+		{D5BE32A9-79EA-4E48-AF4C-29DA52428125}.Release|Win32.Build.0 = Release|Win32
+		{EE3A64B4-22EF-424A-91AA-D9FE887F665B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EE3A64B4-22EF-424A-91AA-D9FE887F665B}.Debug|Win32.Build.0 = Debug|Win32
+		{EE3A64B4-22EF-424A-91AA-D9FE887F665B}.Release|Win32.ActiveCfg = Release|Win32
+		{EE3A64B4-22EF-424A-91AA-D9FE887F665B}.Release|Win32.Build.0 = Release|Win32
+		{CD3F22B4-7E46-4653-BE7B-DE71C79F5A75}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CD3F22B4-7E46-4653-BE7B-DE71C79F5A75}.Debug|Win32.Build.0 = Debug|Win32
+		{CD3F22B4-7E46-4653-BE7B-DE71C79F5A75}.Release|Win32.ActiveCfg = Release|Win32
+		{CD3F22B4-7E46-4653-BE7B-DE71C79F5A75}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
