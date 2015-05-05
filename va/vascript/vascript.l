@@ -159,7 +159,7 @@ L?\"(\\.|[^\\"])*\"	{ char* tmpstr = strdup(((char*)YYText())+1); tmpstr[strlen(
 #if defined(_MSC_VER)
 int /*yyFlexLexer::*/yywrap()
 #else
-int yyFlexLexer::yywrap()
+int /*yyFlexLexer::*/yywrap()
 #endif
 {
     return -1;

@@ -1913,7 +1913,7 @@ static inline bool operator != (const FileNodeIterator& it1, const FileNodeItera
     return !(it1 == it2);
 }
 
-static inline ptrdiff_t operator - (const FileNodeIterator& it1, const FileNodeIterator& it2)
+static inline std::ptrdiff_t operator - (const FileNodeIterator& it1, const FileNodeIterator& it2)
 {
     return it2.remaining - it1.remaining;
 }
@@ -2462,10 +2462,10 @@ template<typename _Tp> inline SeqIterator<_Tp>& SeqIterator<_Tp>::operator -=(in
     return (*this += -delta);
 }
 
-template<typename _Tp> inline ptrdiff_t operator - (const SeqIterator<_Tp>& a,
+template<typename _Tp> inline std::ptrdiff_t operator - (const SeqIterator<_Tp>& a,
                                                     const SeqIterator<_Tp>& b)
 {
-    ptrdiff_t delta = a.index - b.index, n = a.seq->total;
+    std::ptrdiff_t delta = a.index - b.index, n = a.seq->total;
     if( std::abs(delta) > n )
         delta += delta < 0 ? n : -n;
     return delta;

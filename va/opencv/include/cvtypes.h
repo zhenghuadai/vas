@@ -381,6 +381,7 @@ CvAvgComp;
 
 struct CvFeatureTree;
 
+typedef std::ptrdiff_t ptrdiff_t;
 #endif /*_CVTYPES_H_*/
 
 /* End of file. */

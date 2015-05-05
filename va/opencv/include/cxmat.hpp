@@ -353,7 +353,7 @@ inline void Mat::release()
 inline void Mat::locateROI( Size& wholeSize, Point& ofs ) const
 {
     size_t esz = elemSize(), minstep;
-    ptrdiff_t delta1 = data - datastart, delta2 = dataend - datastart;
+    std::ptrdiff_t delta1 = data - datastart, delta2 = dataend - datastart;
     CV_DbgAssert( step > 0 );
     if( delta1 == 0 )
         ofs.x = ofs.y = 0;

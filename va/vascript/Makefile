@@ -20,7 +20,7 @@ abc:
 testvas.exe:${vacgOBJ}
 	${LINK++}
 ${OBJ_DIR}vaslexer.cpp:vascript.l	
-	flex++ -o $@ $^
+	flex++ -o$@ $^
 ${OBJ_DIR}vasparser.cpp:vascript.y	
 	bison -d  -o $@ $<
 
